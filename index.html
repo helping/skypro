@@ -129,11 +129,14 @@
 								</div>
 								<div class="row">
 									<div class="12u">
-<script type="text/javascript" src="//www.google.com/recaptcha/api/js/recaptcha_ajax.js">
-function Captcha() { Recaptcha.create("6Lfxf_ESAAAAABn0BnuXJvPE-y1WnjYYeuTNL8DW", "captcha", { theme: "clean", } ); }
-</script>
 <script>
-$(document).ready( Captcha() );
+$(document).ready(
+  $.getScript('//www.google.com/recaptcha/api/js/recaptcha_ajax.js',
+    function() {
+      Recaptcha.create("6Lfxf_ESAAAAABn0BnuXJvPE-y1WnjYYeuTNL8DW", "captcha", { theme: 'clean' })
+    }
+  )
+);
 </script>
 <div id="captcha">
 </div>
