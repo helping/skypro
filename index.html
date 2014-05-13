@@ -14,11 +14,16 @@
 		$(document).ready(function() {
 			$('body').mousedown(function() {
 				$('body').addClass('clicked');
+				play();
 			});
 			$('body').mouseup(function() {
 				$('body').removeClass('clicked');
 			});
 		});
+		function play(){
+			var audio = document.getElementById("audio");
+			audio.play();
+		}
 		</script>
 		<style type="text/css">body { cursor: url('images/burrito.cur'), auto; }
 		.clicked { cursor: url("images/burrito2.cur"), auto; }
@@ -189,6 +194,6 @@ $(document).ready(
 					</ul>
 			
 			</footer>
-
+<audio id="audio" src="sounds/squish.mp3"></audio>
 	</body>
 </html>
