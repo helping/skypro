@@ -10,7 +10,17 @@
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
-		<style type="text/css">body { cursor: url('images/burrito.cur'), auto; }</style>
+		<script type="text/javascript">
+		$('body').mousedown(function() {
+		$('body').addClass('clicked');
+		});
+		$('body').mouseup(function() {
+		$('body').removeClass('clicked');
+		});
+		</script>
+		<style type="text/css">body { cursor: url('images/burrito.cur'), auto; }
+		.clicked { cursor: url("images/burrito2.cur"), auto; }
+		</style>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
